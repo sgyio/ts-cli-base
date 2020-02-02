@@ -1,0 +1,68 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": ["error", {
+      "allowExpressions": true
+    }],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "class-methods-use-this": "off",
+    "comma-dangle": "off",
+    "complexity": ["error", 10],
+    "import/no-default-export": "error",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "lines-between-class-members": "off",
+    "max-len": ["error", {
+      "code": 120
+    }],
+    "no-console": ["error", {
+      "allow": ["warn", "error", "log"]
+    }],
+    "no-unused-expressions": ["off", {
+      "allowShortCircuit": true,
+      "allowTernary": true,
+      "allowTaggedTemplates": true
+    }],
+    "no-continue": "off",
+    "no-dupe-class-members": "off",
+    "no-inner-declarations": "off",
+    "no-multiple-empty-lines": ["error", {
+      "max": 1,
+      "maxEOF": 0,
+      "maxBOF": 0
+    }],
+    "no-restricted-globals": "off",
+    "no-restricted-syntax": "off",
+    "no-underscore-dangle": "off",
+    "no-useless-constructor": "off",
+    "object-curly-newline": ["error", {
+      "ImportDeclaration": {
+        "consistent": true
+      }
+    }]
+  },
+  "overrides": [{
+    "files": ["tests/**/*.ts"],
+    "rules": {
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-undef": "off"
+    }
+  }]
+}
