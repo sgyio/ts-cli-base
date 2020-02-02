@@ -1,7 +1,7 @@
 import { Container } from 'inversify';
+import { ICommand } from 'commands/command.interface';
 import { TYPES } from './types';
 
-import { ICommand } from 'commands/command.interface';
 import { SayHelloCommand } from '../commands';
 import { ISomeService } from '../services/some.interface';
 import { SomeService } from '../services/some.service';
